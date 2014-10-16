@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app='peteBeachHouse'>
+<head>
+	<title>Petersen Beach House</title>
+
+	<!-- Stylesheets -->
+	<!-- <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="app/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body ng-controller='mainCtrl'>
+
+	<div class="header" ng-include="'app/views/header.html'"></div>
+	<div ui-view></div>
+	<footer>
+		<a ui-sref='login'>Login</a>
+		<a ng-click='logOut()'>Logout</a>
+		<a ng-click='checkAuth()'>Check</a>
+	</footer>
+
+	<!-- Environment -->
+	<script src="app/scripts/env.js"></script>
+
+	<!-- Vendor -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.min.js"></script>
+	<script src="app/bower_components/firebase/firebase.js"></script>
+    <script src="app/bower_components/angularfire/dist/angularfire.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="app/bower_components/angular-scroll/angular-scroll.min.js"></script>
+    <script src="httP://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.2.2/textAngular-sanitize.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.2.2/textAngular.min.js'></script>
+
+    <!-- App -->
+    <script src="app/scripts/app.js"></script>
+    <!-- Controllers -->
+    <script src="app/scripts/controllers/main.js"></script>
+    <script src="app/scripts/controllers/home.js"></script>
+    <script src="app/scripts/controllers/houseDetails.js"></script>
+    <script src="app/scripts/controllers/location.js"></script>
+    <script src="app/scripts/controllers/overview.js"></script>
+    <script src="app/scripts/controllers/rates.js"></script>
+    <script src="app/scripts/controllers/slider.js"></script>
+    <script src="app/scripts/controllers/login.js"></script>
+    <script src="app/scripts/controllers/users.js"></script>
+    <script src="app/scripts/controllers/dashboard.js"></script>
+    <script src="app/scripts/controllers/dbOverview.js"></script>
+    <script src="app/scripts/controllers/dbRates.js"></script>
+    <!-- Services -->
+    <script src="app/scripts/services/environmentService.js"></script>
+    <script src="app/scripts/services/firebaseService.js"></script>
+    <script src="app/scripts/services/slider.js"></script>
+    <script src="app/scripts/services/authentication.js"></script>
+    <script src="app/scripts/services/dashboard.js"></script>
+</body>
+</html>

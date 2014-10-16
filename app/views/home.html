@@ -1,0 +1,30 @@
+<div class='sub-header-wrapper'>
+  <div class='main-description'>
+    <p>Located on a private road and beach, great getaway</p>
+  </div>
+</div>
+<div class="sections-nav" ui-scrollfix="+80">
+  <div class='scrollfix-wrapper'>
+        <ul class='nav nav-pills'>
+          <li class='scrollfix-site-name'><span class="pete">Petersen</span><span class="beach-house">BeachHouse</span></li>
+          <li ng-class="{active: overviewState}" du-scrollspy="overview"><a href="#overview" du-smooth-scroll offset='70'>Overview</a></li>
+          <li du-scrollspy="location"><a href="#location" du-smooth-scroll offset='100'>Location</a></li>
+          <li du-scrollspy="rates"><a href="#rates" du-smooth-scroll offset='70'>Rates</a></li>
+          <li du-scrollspy="houseDetails"><a href="#houseDetails" du-smooth-scroll offset='70'>House Details</a></li>
+        </ul>
+  </div>
+</div>
+<div>
+  <section id="overview">
+    <div class="section" ng-include="'app/views/sections/overview.html'" ng-controller='overviewController'></div>
+  </section>
+  <section id="location">
+    <div class="section" ng-controller='LocationController'></div>
+  </section>
+  <section id="rates">
+    <div class="section" ng-include="'app/views/sections/rates.html'" ng-controller='RatesController'></div>
+  </section>
+  <section id="houseDetails">
+    <div class="section" ng-controller='HouseDetailsController'></div>
+  </section>
+</div>

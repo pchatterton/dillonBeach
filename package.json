@@ -1,0 +1,13 @@
+{
+  "name": "PeteBeachHouse",
+  "version": "0.0.1",
+  "description": "Beach house website for Petersens",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paul Chatterton",
+  "dependencies": {
+    "body-parser": "^1.7.0",
+    "express": "^4.8.7"
+  }
+}

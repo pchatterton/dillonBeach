@@ -1,0 +1,29 @@
+<div class='edit-wrapper'>
+	<p>Make changes to the Rates Portion of the page<p>
+		<!-- Edit Rates -->
+	<div class='edit-summary'>
+		<div class='main-level'>
+			<h3>Rates</h3>
+			<table class="table table-striped">
+			    <thead>
+			        <tr>
+			            <th data-field="maxCap">Max Capacity (occupants)</th>
+			            <th data-field="2nights">2 nights</th>
+			            <th data-field="3nights">3 nights</th>
+			            <th data-field="4nights">4 nights</th>
+			            <th data-field="5nights">5 nights</th>
+			            <th data-field="6nights">6 nights</th>
+			            <th data-field="7nights">7 nights</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			    	<tr>
+				        <td ng-repeat='(key, prop) in ratesGround'>
+				        	<input type='text' value="{{prop}}" ng-model='ratesGround[key]' ng-change="ratesGround.$save(ratesGround); showChanges()">
+				        </td>
+	    			</tr>
+			    </tbody>
+			</table>
+		</div>
+	</div>
+</div>

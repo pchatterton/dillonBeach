@@ -1,0 +1,50 @@
+<div class="rates-wrapper">
+	<h1>Petersen Beach House Rates</h1>
+	<div class="left-rates-wrapper">
+		<div class="rates-table">
+			<div class="panel panel-default">
+		  <!-- Table -->
+		  	<table class="table">
+		    	<thead>
+		    		<tr>
+		    			<th>Level</th>
+		    			<th class='text-center'>Level (Max Capacity)</th>
+		    			<th class='text-center'>2 nights</th>
+		    			<th class='text-center'>3 nights</th>
+		    			<th class='text-center'>4 nights</th>
+		    			<th class='text-center'>5 nights</th>
+		    			<th class='text-center'>6 nights</th>
+						<th class='text-center'>7 nights</th>
+		    		</tr>
+		    	</thead>
+		    	<tbody>
+		    		<tr ng-repeat='rateData in ratesData'>
+		    			<td>{{rateData.level}}</td>
+		    			<td class='text-center'>{{rateData.nightly | currency}}</td>
+		    			<td class='text-center'>{{rateData.wkdNight | currency}}</td>
+		    			<td class='text-center'>{{rateData.weekly | currency}}</td>
+		    		</tr>
+		    	</tbody>
+		  	</table>
+		</div>
+		</div>
+	</div>
+	<div class='right-rates-wrapper'>
+		<h3>Cleaning</h3>
+		<p>Description about cleaning....</p>
+		<h3>Other Fees</h3>
+		<p>Description about cleaning....</p>
+	</div>
+	<div class='clear'></div>
+	<div class='notes'>
+		<h3>Notes</h3>
+		<ul>
+			<li>Rates shown above do not include taxes and fees</li>
+		</ul>
+	</div>
+	<nav>
+        <ul class='nav nav-pills'>
+        	<li class='active'><a href="">Contact Owner</a></li>
+        </ul>
+    </nav>
+</div>

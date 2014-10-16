@@ -1,0 +1,118 @@
+<div class='edit-wrapper'>
+	<p>Make changes to the Overview Portion of the page<p>
+	
+	<!-- Edit Images -->
+	<div class='edit-images'>
+		Add, edit, or remove images...
+	</div>
+
+	<!-- Edit Summary -->
+	<div class='edit-summary'>
+		<div class='main-level'>
+			<h3>Main Level</h3>
+			<table class="table table-striped">
+			    <thead>
+			        <tr>
+			            <th data-field="hightlight">Hightlight</th>
+			            <th data-field="value">Value</th>
+			            <th data-field="delete">Delete</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			    	<tr ng-repeat='levelMainSum in levelMainSums'>
+				        <td>
+				        	<input type='text' value="{{levelMainSum.key}}" ng-model='levelMainSum.key' ng-change="levelMainSums.$save(levelMainSum); showChanges()" >
+				        </td>
+
+				        <td>
+				        	<input type='text' value="{{levelMainSum.val}}"  ng-model='levelMainSum.val' ng-change="levelMainSums.$save(levelMainSum);  showChanges()" >
+				        </td>
+				        <td><button ng-click='levelMainSums.$remove(levelMainSum)'>Delete</button></td>
+	    			</tr>
+				    <tr>
+				        <td><input type='text' ng-model="newMainLev.key"></td>
+				        <td><input type='text' ng-model="newMainLev.val"></td>
+				        <td><button ng-click='addLevelMainSum()'>Save</button></td>
+	    			</tr>
+			    </tbody>
+			</table>
+		</div>
+		<div class='second-level'>
+			<h3>Second Level</h3>
+			<table class="table table-striped">
+			    <thead>
+			        <tr>
+			            <th data-field="highlight">Hightlight</th>
+			            <th data-field="value">Value</th>
+			            <th data-field="delete">Delete</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			    	<tr ng-repeat='levelSecSum in levelSecondSums'>
+				        <td>
+				        	<input type='text' value="{{levelSecSum.key}}" ng-model='levelSecSum.key' ng-change="levelSecondSums.$save(levelSecSum); showChanges()" >
+				        </td>
+
+				        <td>
+				        	<input type='text' value="{{levelSecSum.val}}"  ng-model='levelSecSum.val' ng-change="levelSecondSums.$save(levelSecSum);  showChanges()" >
+				        </td>
+				        <td><button ng-click='levelSecondSums.$remove(levelSecSum)'>Delete</button></td>
+	    			</tr>
+				    <tr>
+				        <td><input type='text' ng-model="newSecLev.key"></td>
+				        <td><input type='text' ng-model="newSecLev.val"></td>
+				        <td><button ng-click='addLevelSecSum()'>Save</button></td>
+	    			</tr>
+			    </tbody>
+			</table>
+			<p ng-show='levelSummaryChange'>Changes saved</p>
+		</div>
+	</div>
+
+	<!-- Edit Quotes -->
+	<div class='edit-quotes'>
+		<div class='quotes-list'>
+			<h3>Quotes</h3>
+			<table class="table table-striped">
+			    <thead>
+			        <tr>
+			            <th data-field="quote">Quote</th>
+			            <th data-field="name">Name</th>
+			            <th data-field="delete">Delete</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			    	<tr ng-repeat='quote in quotes'>
+				        <td>
+				        	<input type='text' value="{{quote.text}}" ng-model='quote.text' ng-change="quotes.$save(quote); showChanges()" >
+				        </td>
+
+				        <td>
+				        	<input type='text' value="{{quote.name}}"  ng-model='quote.name' ng-change="quotes.$save(quote);  showChanges()" >
+				        </td>
+				        <td><button ng-click='quotes.$remove(quote)'>Delete</button></td>
+	    			</tr>
+				    <tr>
+				        <td><input type='text' ng-model="newQuote.text"></td>
+				        <td><input type='text' ng-model="newQuote.name"></td>
+				        <td><button ng-click='addQuotes()'>Save</button></td>
+	    			</tr>
+			    </tbody>
+			</table>
+			<p ng-show='levelSummaryChange'>Changes saved</p>
+		</div>
+	</div>
+
+	<!-- Edit Description -->
+	<div class='edit-description'>
+		<form name='descriptionForm' ng-submit='htmlVariable.$save(htmlVariable); descriptionForm.$setPristine();'>
+			<text-angular ng-model="htmlVariable.visibleText" name='descVis'></text-angular>
+			<p ng-show='descriptionForm.descVis.$dirty'>Changes not saved. Click Save button to save changes</p>
+			<text-angular ng-model="htmlVariable.hiddenText" name='descHid'></text-angular>
+			<p ng-show='descriptionForm.descHid.$dirty'>Changes not saved. Click save button to save changes</p>
+			<button type='submit'>Save</button>
+		</form>
+	</div>
+
+</div>
+
