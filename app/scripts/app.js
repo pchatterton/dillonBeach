@@ -24,6 +24,9 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 				},
 				quotes: function(firebaseService) {
 					return firebaseService.getQuotes();
+				},
+				ratesInfo: function(firebaseService) {
+					return	firebaseService.getRatesInfo();
 				}
 			}
 		})

@@ -26,8 +26,11 @@ app.factory('firebaseService', function ($firebase, environmentService) {
 			return $firebase(new Firebase(firebaseEndpoint + 'overview/rates/ground')).$asObject();	
 		},
 		getRatesBoth: function() {
-			return $firebase(new Firebase(firebaseEndpoint + 'overview/rate/both')).$asObject();	
+			return $firebase(new Firebase(firebaseEndpoint + 'overview/rates/both')).$asObject();	
 		},
+		getRatesInfo: function() {
+			return $firebase(new Firebase(firebaseEndpoint + 'overview/rates')).$asArray();
+		}
 	}
 
 	// this.getAuth = function() {

@@ -7,7 +7,6 @@
 		  	<table class="table">
 		    	<thead>
 		    		<tr>
-		    			<th>Level</th>
 		    			<th class='text-center'>Level (Max Capacity)</th>
 		    			<th class='text-center'>2 nights</th>
 		    			<th class='text-center'>3 nights</th>
@@ -18,12 +17,12 @@
 		    		</tr>
 		    	</thead>
 		    	<tbody>
-		    		<tr ng-repeat='rateData in ratesData'>
-		    			<td>{{rateData.level}}</td>
-		    			<td class='text-center'>{{rateData.nightly | currency}}</td>
-		    			<td class='text-center'>{{rateData.wkdNight | currency}}</td>
-		    			<td class='text-center'>{{rateData.weekly | currency}}</td>
-		    		</tr>
+			    	<tr ng-repeat='row in ratesInfo'>
+				        <td ng-repeat='(key, prop) in row'>{{prop}}</td>
+	    			</tr>
+	    			<tr>
+				        <td ng-repeat='(key, prop) in row'>{{prop}}</td>
+	    			</tr>
 		    	</tbody>
 		  	</table>
 		</div>

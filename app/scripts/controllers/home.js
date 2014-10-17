@@ -1,5 +1,5 @@
 angular.module('peteBeachHouse')
-	.controller('homeCtrl', function($scope, $interval, levelMainInfo, levelSecondInfo, description, quotes) {
+	.controller('homeCtrl', function($scope, $interval, levelMainInfo, levelSecondInfo, description, quotes, ratesInfo) {
 		
 		// Insert Level Summary Data
 		$scope.levelMainSums = levelMainInfo;
@@ -24,5 +24,8 @@ angular.module('peteBeachHouse')
 			changeQuote();
 			intervalSet = $interval(changeQuote, 8000)
 		})
+
+		$scope.ratesInfo = ratesInfo;
+		console.log($scope.ratesInfo)
 
 	});

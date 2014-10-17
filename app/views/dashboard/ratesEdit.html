@@ -22,8 +22,14 @@
 				        	<input type='text' value="{{prop}}" ng-model='ratesGround[key]' ng-change="ratesGround.$save(ratesGround); showChanges()">
 				        </td>
 	    			</tr>
+	    			<tr>
+				        <td ng-repeat='(key2, prop2) in ratesBoth'>
+				        	<input type='text' value="{{prop2}}" ng-model='ratesBoth[key2]' ng-change="ratesBoth.$save(ratesBoth); showChanges()">
+				        </td>
+	    			</tr>
 			    </tbody>
 			</table>
+			<p ng-show='levelSummaryChange'>Changes saved</p>
 		</div>
 	</div>
 </div>
