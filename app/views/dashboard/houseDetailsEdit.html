@@ -1,0 +1,31 @@
+<div class='edit-wrapper'>
+	<p>Make changes to the house details</p>
+
+	<!-- Edit House Details -->
+	<div class='edit-house-details'>
+	<table class="table table-striped">
+		<tbody>
+			<tr ng-repeat='houseDetail in houseDetails'>
+				<td><input type='text' value='{{houseDetail.title}}' ng-model='houseDetail.title' ng-change='houseDetails.$save(houseDetail)'></td>
+				<td>
+					<ul>
+						<li ng-repeat='detail in houseDetail.details'><input type='text' value='{{detail.name}}' ng-model='detail.name'></li>
+						<li><input type='text' ng-model='newExistDetail'><button ng-click='addToExistDetail(houseDetail, newExistDetail); newExistDetail = ""'>Save</button></li>
+					</ul>
+				</td>
+				<td><button ng-click='houseDetails.$save(houseDetail)'>Save</button></td>
+			</tr>
+
+			<tr>
+				<td><input type='text' ng-model='newHouseDetails.title'></td>
+				<td>
+					<ul>
+						<li ng-repeat='item in detailsArr'>{{item.name}}</li>
+						<li><input type='text' ng-model='miniDetail'><button ng-click='addDetail()'>Add detail</button></li>
+					</ul>
+				</td>
+				<td><button ng-click='addNewDetails()'>Save</button></td>
+			</tr>
+	</table>
+	</div>
+</div>	

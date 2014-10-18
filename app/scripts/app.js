@@ -1,4 +1,4 @@
-var app = angular.module('peteBeachHouse', ['firebase', 'ui.router', 'duScroll', 'ui.utils', 'textAngular']);
+var app = angular.module('peteBeachHouse', ['firebase', 'ui.router', 'duScroll', 'ui.utils', 'textAngular', 'google-maps']);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
 
@@ -97,6 +97,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 		.state('dashboard.houseDetails', {
 			url: '/houseDetails',
 			templateUrl: '/app/views/dashboard/houseDetailsEdit.html',
+			controller: 'dbHouseDetails',
+			resolve: {
+				houseDetails: function(firebaseService) {
+					return firebaseService.getHouseDetails();
+				}
+			}
 		})
 		.state('dashboard.users', {
 			url: '/users',

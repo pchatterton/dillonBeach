@@ -26,6 +26,5 @@ angular.module('peteBeachHouse')
 		})
 
 		$scope.ratesInfo = ratesInfo;
-		console.log($scope.ratesInfo)
 
 	});

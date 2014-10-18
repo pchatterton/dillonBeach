@@ -21,7 +21,7 @@ app.factory('firebaseService', function ($firebase, environmentService) {
 			return $firebase(new Firebase(firebaseEndpoint + 'overview/quotes')).$asArray();
 		},
 
-		//GET RATEs
+		// GET RATEs
 		getRatesGround: function() {
 			return $firebase(new Firebase(firebaseEndpoint + 'overview/rates/ground')).$asObject();	
 		},
@@ -30,18 +30,14 @@ app.factory('firebaseService', function ($firebase, environmentService) {
 		},
 		getRatesInfo: function() {
 			return $firebase(new Firebase(firebaseEndpoint + 'overview/rates')).$asArray();
+		},
+
+		// GET HOUSE DETAILS
+		getHouseDetails: function() {
+			return $firebase(new Firebase(firebaseEndpoint + 'houseDetails')).$asArray();
+		},
+		updateDetailLists: function(detailID) {
+			return $firebase(new Firebase(firebaseEndpoint + 'houseDetails/' + detailID + '/details')).$asArray();	
 		}
 	}
-
-	// this.getAuth = function() {
-
-	// }
-
-	// this.getUser = function(userId){
-	// 	return $firebase(new Firebase(firebaseUrl + 'users/' + userId)).$asObject();
-	// };
-
-	// this.getThings = function(userId){
-	// 	return $firebase(new Firebase(firebaseUrl + 'users/' + userId + '/things')).$asArray();	
-	// }
 })

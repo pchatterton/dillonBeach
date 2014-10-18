@@ -1,0 +1,13 @@
+<div class='house-details-wrapper'>
+	<table class="table table-striped">
+		<tbody>
+			<tr ng-repeat='houseDetail in houseDetails'>
+				<td>{{houseDetail.title}}></td>
+				<td>
+					<ul>
+						<li ng-repeat='detail in houseDetail.details'>{{detail.name}}</li>
+					</ul>
+				</td>
+			</tr>
+	</table>
+</div>
