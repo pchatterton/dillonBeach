@@ -1,8 +1,9 @@
 <div class='house-details-wrapper'>
-	<table class="table table-striped">
+	<h3>House Details</h3>
+	<table class="table table-striped table-bordered">
 		<tbody>
 			<tr ng-repeat='houseDetail in houseDetails'>
-				<td>{{houseDetail.title}}></td>
+				<td>{{houseDetail.title}}</td>
 				<td>
 					<ul>
 						<li ng-repeat='detail in houseDetail.details'>{{detail.name}}</li>
