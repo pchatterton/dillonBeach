@@ -3,10 +3,10 @@
 	<div class='slider-wrapper' ng-include="'app/views/sections/slider.html'" ng-controller='SliderCtrl'></div>
 	<div class='main-overview-description'>
 		<h3>Petersen Beach House Description</h3>
-		<div class='preview' ng-bind-html='bhDescription.visibleText'></div>
-		<div class='collapse-description animate-show-hide' ng-show='showDetails' ng-bind-html='bhDescription.hiddenText'></div>
-		<p class='show-hide' ng-hide='showDetails' ng-click="showDetails_btn(true)">More Details</p>
-		<p class='show-hide' ng-show='showDetails' ng-click="showDetails_btn(false)">Hide details</p>
+		<div class='preview description-content' ng-bind-html='bhDescription.visibleText'></div>
+		<div class='collapse-description description-content' ng-show='showDetails' ng-bind-html='bhDescription.hiddenText'></div>
+		<a class='show-hide' ng-hide='showDetails' ng-click="showDetails_btn(true)">More Details</a>
+		<a class='show-hide' ng-show='showDetails' ng-click="showDetails_btn(false)">Hide details</a>
 	</div>
 </div>
 <div class='right-content'>
@@ -15,36 +15,39 @@
 		<div class='levels-overview-wrapper'>
 			<div class='main-level-overview'>
 				<h3>Main Level</h3>
-				<ul>
-					<li ng-repeat='levelMainSum in levelMainSums'>
-						<span>{{levelMainSum.key}}</span>
-						<span>{{levelMainSum.val}}</span>
-					</li>
-				</ul>
+				<table class="table table-striped">
+  					<tbody>
+  						<tr ng-repeat='levelMainSum in levelMainSums'>
+  							<td class='indent'>{{levelMainSum.key}}</td>
+  							<td>{{levelMainSum.val}}</td>
+  						</tr>
+  					</tbody>
+				</table>
 			</div>
 			<div class='second-level-overview'>
 				<h3>Second Level</h3>
-				<ul>
-					<li ng-repeat='levelSecSum in levelSecondSums'>
-						<span>{{levelSecSum.key}}</span>
-						<span>{{levelSecSum.val}}</span>
-					</li>
-				</ul>
+				<table class="table table-striped">
+  					<tbody>
+  						<tr ng-repeat='levelSecSum in levelSecondSums'>
+  							<td class='indent'>{{levelSecSum.key}}</td>
+  							<td>{{levelSecSum.val}}</td>
+  						</tr>
+  					</tbody>
+				</table>
 			</div>
 		</div>
 		<p>Two levels are available for rent.</p>
-		<p class='view-rates'><a href="" ng-click="toSection3()">View rates</a></p>
 		<nav>
 	        <ul class='nav nav-pills'>
-	        	<li class='active'><a href="">Contact Owner</a></li>
+	        	<li class='float-left'><a href="">Contact Owner</a></li>
+	        	<li class='float-right'><a href="">View Rates</a></li>
 	        </ul>
 	    </nav>
 	</div>
 	<!-- Quotes -->
 	<div class='quotes-container'>
-		<h2>Quotes</h2>
 		<p>{{bhQuotesSel.text}}</p>
-		<p>-{{bhQuotesSel.name}}</p>
+		<p class='quote-name'>- {{bhQuotesSel.name}}</p>
 	</div>
 </div>
 <div class='clear'></div>

@@ -1,5 +1,5 @@
 <div class='location-content-wrapper'>
-	<h2>Places to visit</h2>
+	<h2>Places to visit near Dillon's Beach</h2>
 	<p>Listed below are popular areas near Dillon Beach to visit. To see more details of activities, restaurants, and other locations, click here.</p>
 	<div class='visit-places'>
 		<div class="panel panel-default">
@@ -16,7 +16,7 @@
 		    		<tr ng-repeat='nearbyArea in nearbyAreas' ng-click='addPlaceMap(nearbyArea)'>
 		    			<td>{{nearbyArea.name}}</td>
 		    			<td class='text-center'>{{nearbyArea.distance}}</td>
-		    			<td class='text-center' ng-class="{'notSelected': !nearbyArea.show}"><i class="fa fa-map-marker fa-2x"></i></td>
+		    			<td class='text-center marker-color' ng-class="{'notSelected': !nearbyArea.show}"><i class="fa fa-map-marker fa-2x"></i></td>
 		    		</tr>
 		    	</tbody>
 		  	</table>
