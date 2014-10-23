@@ -1,13 +1,11 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var cloudinary = require('cloudinary');
-var http = require('http')
 var app = express();
 var pin = '123456';
 
 console.log(__dirname)
 
-app.set('port', process.env.PORT || 8080);
 app.use(express.static(__dirname + '/'));
 app.use(express.static(__dirname + '/bower_components'));
 app.use(bodyParser());
@@ -27,12 +25,6 @@ cloudinary.config({
   api_secret: '-yZt0uHbskTOXCEEUCHssad6oGU' 
 });
 
-// var port = Number(process.env.PORT || 1212);
+var port = Number(process.env.PORT || 3000);
 
-// app.listen(port, function () {
-//     console.log("Listening on " + port);
-// });
-
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
-});
+app.listen(port);
