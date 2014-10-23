@@ -1,10 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var cloudinary = require('cloudinary');
 var app = express();
-var pin = '123456';
-
-console.log(__dirname)
 
 app.use(express.static(__dirname + '/'));
 app.use(bodyParser());
@@ -16,22 +12,14 @@ app.use(function (req, res, next) {
     next();
 });
 
-// Cloudinary
-
-cloudinary.config({ 
-  cloud_name: 'petersen-beach-house', 
-  api_key: '261624937114185', 
-  api_secret: '-yZt0uHbskTOXCEEUCHssad6oGU' 
-});
-
 var port = Number(process.env.PORT || 3000);
-
-app.listen(port);
 
 app.all('/*', function(req, res, next) {
 	if(req.url == '/') {
 		res.sendfile('index.html', {root: __dirname + '/'});
 	} else {
-		res.sendfile('index.html', {root: __dirname + '/app'});
+		res.sendfile('index.html', {root: __dirname + '/'});
 	}
 })
+
+app.listen(port);
