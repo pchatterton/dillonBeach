@@ -7,7 +7,6 @@ var pin = '123456';
 console.log(__dirname)
 
 app.use(express.static(__dirname + '/'));
-app.use(express.static(__dirname + '/bower_components'));
 app.use(bodyParser());
 
 app.use(function (req, res, next) {
