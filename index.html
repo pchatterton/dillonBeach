@@ -14,9 +14,8 @@
 	<header ng-include="'app/views/header.html'"></header>
 	<div class='container-main' ui-view></div>
 	<footer>
-		<a ui-sref='login'>Login</a>
+		<a ui-sref='login'>Admin Login</a>
 		<a ng-click='logOut()'>Logout</a>
-		<a ng-click='checkAuth()'>Check</a>
 	</footer>
 
 
@@ -63,5 +62,8 @@
     <script src="app/scripts/services/authentication.js"></script>
     <script src="app/scripts/services/dashboard.js"></script>
     <script src="app/scripts/services/map.js"></script>
+    <!-- Filters -->
+    <script src="app/scripts/filters/currencyTextFilter.js"></script>
+
 </body>
 </html>

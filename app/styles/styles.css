@@ -52,7 +52,7 @@ html {
 }
 
 body {
-  background-color: #f5f5f5;
+  background-color: #f6f6f6;
   font-size: 1.4rem; /* =14px */
   font-family: Arial,sans-serif;
   line-height: 20px;
@@ -395,6 +395,60 @@ header {
     background-color: #FFF;
   }
 
+    .rates-wrapper {
+      margin-top: 20px;
+      position: relative;
+    }
+
+      .rates-wrapper h2 {
+        margin-bottom: 15px;
+        color: #3D7E99;
+      }
+
+      .rates-wrapper h3 {
+        font-size: 2.0rem;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        color: #3D7E99;
+      }
+
+      .rates-wrapper .left-rates-wrapper {
+        width: 70%;
+        float: left;
+      }
+
+        #rates .left-rates-wrapper .table > tbody > tr > td {
+          text-align: center;
+        }
+
+        #rates .left-rates-wrapper .table > tbody > tr > td:first-child {
+          font-weight: bold;
+        }
+
+      .rates-wrapper .right-rates-wrapper {
+        width: 30%;
+        float: right;
+        padding-left: 5%;
+      }
+
+      .rates-wrapper .nav {
+        position: absolute;
+        right: 100px;
+        bottom: 0;
+      }
+
+        .rates-wrapper .nav > li > a {
+          padding: 5px 10px;
+          color: #FFF;
+          background-color: #3D7E99;
+        }
+
+        .rates-wrapper .nav > li > a:hover {
+          padding: 5px 10px;
+          color: #FFF;
+          background-color: #559dbb;
+        }
+
   #houseDetails {
     margin-top: 50px;
     background-color: #FFF;
@@ -412,6 +466,16 @@ header {
       padding: 10px;
       margin-bottom: 0;
     }
+      
+      .house-details-wrapper .table > tbody > tr {
+        clear: both;
+      }
+
+      .house-details-wrapper .table > tbody > tr > td ul {
+        -webkit-column-count: 2; /* Chrome, Safari, Opera */
+        -moz-column-count: 2; /* Firefox */
+        column-count: 2;
+      }
 
 footer {
   height: 60px;
@@ -602,37 +666,6 @@ footer {
   margin-top: 15px;
   margin-bottom: 15px;
   padding-bottom: 20px;
-}
-
-.rates-wrapper {
-  margin-top: 20px;
-  position: relative;
-}
-
-.rates-wrapper h1 {
-  margin-bottom: 15px;
-}
-
-.rates-wrapper .left-rates-wrapper {
-  width: 650px;
-  float: left;
-}
-
-.rates-wrapper .right-rates-wrapper {
-  width: 400px;
-  float: right;
-}
-
-.rates-wrapper h3 {
-  font-size: 2.0rem;
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-
-.rates-wrapper .nav {
-  position: absolute;
-  right: 100px;
-  bottom: 0;
 }
 
 #section-4 {

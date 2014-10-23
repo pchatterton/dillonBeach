@@ -1,5 +1,5 @@
 <div class="rates-wrapper">
-	<h1>Petersen Beach House Rates</h1>
+	<h2>Petersen Beach House Rates</h2>
 	<div class="left-rates-wrapper">
 		<div class="rates-table">
 			<div class="panel panel-default">
@@ -18,10 +18,10 @@
 		    	</thead>
 		    	<tbody>
 			    	<tr ng-repeat='row in ratesInfo'>
-				        <td ng-repeat='(key, prop) in row'>{{prop}}</td>
+				        <td ng-repeat='(key, prop) in row'>{{prop | currencyTextFilter}}</td>
 	    			</tr>
 	    			<tr>
-				        <td ng-repeat='(key, prop) in row'>{{prop}}</td>
+				        <td ng-repeat='(key, prop) in row'>{{prop | currencyTextFilter}}</td>
 	    			</tr>
 		    	</tbody>
 		  	</table>
@@ -37,9 +37,7 @@
 	<div class='clear'></div>
 	<div class='notes'>
 		<h3>Notes</h3>
-		<ul>
-			<li>Rates shown above do not include taxes and fees</li>
-		</ul>
+		<p>Rates shown above do not include taxes and fees</p>
 	</div>
 	<nav>
         <ul class='nav nav-pills'>
