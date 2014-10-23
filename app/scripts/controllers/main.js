@@ -1,13 +1,23 @@
 angular.module('peteBeachHouse')
 	.controller('mainCtrl', function($scope, authService) {
-	$scope.logOut = function () {
+    $scope.logOut = function () {
         authService.logOut();
+        checkAuth();
     }
-    $scope.checkAuth = function() {
+    var checkAuth = function() {
     	if(authService.checkAuth()) {
-    		console.log('user logged in...')
+    		$scope.loggedIn = true;
     	} else {
-    		console.log('user not logged in...')
+    		$scope.loggedIn = false;
     	}
     }
+
+    checkAuth();
+
+    $scope.$on('updateLoggedIn', function(event) {
+        checkAuth();
+    });
+
+
+
 });

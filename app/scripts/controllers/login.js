@@ -7,6 +7,7 @@ angular.module('peteBeachHouse')
 	$scope.logMeIn = function () {
         authService.logIn($scope.user, function(res) {
         	if(res.issue === 'none') {
+        		$scope.$broadcast('updateLoggedIn');
 				$state.go('dashboard');
         	} else {
 	        	$scope.$apply(function(){
