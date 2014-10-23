@@ -7,7 +7,7 @@ var pin = '123456';
 
 console.log(__dirname)
 
-app.set('port', process.env.PORT || 1212);
+app.set('port', process.env.PORT || 8080);
 app.use(express.static(__dirname + '/'));
 app.use(express.static(__dirname + '/bower_components'));
 app.use(bodyParser());
