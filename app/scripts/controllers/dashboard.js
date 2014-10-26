@@ -1,19 +1,18 @@
 angular.module('peteBeachHouse')
-	.controller('dashboardCtrl', function($scope, checkAuth, $state) {
+	.controller('dashboardCtrl', function($scope, checkAuth, $state, firebaseService) {
 	
+	
+	function getUserInfo(userid) {
+		$scope.user = firebaseService.getUserInfo(userid);
+	}
+
 	if(!checkAuth) {
-		console.log('state.go')
 		$state.go('login');
 	} else {
+		getUserInfo(checkAuth.uid)
 		$state.go('dashboard.overview');
 	}
 
-	//OVERVIEW
-	//level summary
-	// $scope.levelSums = getLevelInfo;
 
-	// $scope.addLevelSum = function() {
-	// 	$scope.levelSums.$add($scope.newLevSum)
-	// }
 
 });

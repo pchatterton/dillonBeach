@@ -4,6 +4,10 @@ app.factory('firebaseService', function ($firebase, environmentService) {
 	var firebaseEndpoint = environmentService.getEnv().firebase;
 
 	return {
+		getUserInfo: function(userid) {
+			var simpID = userid.replace('simplelogin:', '');
+			return $firebase(new Firebase(firebaseEndpoint + '/users/' + simpID)).$asObject();	
+		},
 		// GET OVERVIEW
 		getImages: function() {
 			return $firebase(new Firebase(firebaseEndpoint + 'overview/images')).$asArray();	

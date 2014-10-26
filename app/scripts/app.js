@@ -2,11 +2,11 @@ var app = angular.module('peteBeachHouse', ['firebase', 'ui.router', 'duScroll',
 
 app.config(function ($stateProvider, $urlRouterProvider) {
 
-	$urlRouterProvider.otherwise('/home');
+	$urlRouterProvider.otherwise('/');
 
 	$stateProvider
 		.state('home', {
-			url: '/home',
+			url: '/',
 			templateUrl: '/app/views/home.html',
 			controller: 'homeCtrl',
 			resolve: {
@@ -112,3 +112,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 });
 
 app.run(function($state){});
+
+app.config(["$locationProvider", function($locationProvider) {
+  $locationProvider.html5Mode(true);
+}]);

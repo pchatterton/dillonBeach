@@ -50,7 +50,6 @@ angular.module('peteBeachHouse')
 				  }
 				});
 			} else {
-				console.log("Error creating user:", error);
 				return false;
 			}
 		});
@@ -62,12 +61,10 @@ angular.module('peteBeachHouse')
 	};
 
 	this.checkAuth = function() {
-		console.log('checking auth...')
 		var check = authRef.getAuth();
 		if(!check || check === null) {
 			return false;
 		}
-		return true;
+		return check;
 	};
-
   });

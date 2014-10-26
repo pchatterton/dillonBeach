@@ -12,14 +12,6 @@ app.use(function (req, res, next) {
     next();
 });
 
-var port = Number(process.env.PORT || 80);
-
-// app.all('/*', function(req, res, next) {
-// 	if(req.url == '/') {
-// 		res.sendfile('index.html', {root: __dirname + '/'});
-// 	} else {
-// 		res.sendfile('index.html', {root: __dirname + '/'});
-// 	}
-// })
+var port = Number(process.env.PORT || 3000);
 
 app.listen(port);

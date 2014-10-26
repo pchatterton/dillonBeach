@@ -15,6 +15,7 @@ angular.module('peteBeachHouse')
     checkAuth();
 
     $scope.$on('updateLoggedIn', function(event) {
+        console.log('check Auth now!')
         checkAuth();
     });
 
