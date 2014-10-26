@@ -484,9 +484,14 @@ footer {
   margin-top: 30px;
 }
 
+  footer p {
+    float: left;
+  }
+
   footer a {
     color: #fff;
     cursor: pointer;
+    float: right;
   }
 
   footer a:hover {
@@ -497,12 +502,26 @@ footer {
 
 /* DASHBOARD STYLES */
 
-  .dashboard-container nav.navbard {
+  .dashboard-container nav {
     float: left;
   }
 
   .dashboard-container h2 {
     float: right;
+    font-size: 2.0rem;
+
+  }
+
+  .edit-wrapper .main-level {
+    width: 48%;
+    float: left;
+    background-color: #FFF;
+  }
+
+  .edit-wrapper .second-level {
+    width: 48%;
+    float: right;
+    background-color: #FFF;
   }
 
 

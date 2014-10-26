@@ -2,9 +2,9 @@
 	<p>Make changes to the Overview Portion of the page<p>
 	
 	<!-- Edit Images -->
-	<div class='edit-images'>
+<!-- 	<div class='edit-images'>
 		Add, edit, or remove images...
-	</div>
+	</div> -->
 
 	<!-- Edit Summary -->
 	<div class='edit-summary'>
@@ -27,7 +27,7 @@
 				        <td>
 				        	<input type='text' value="{{levelMainSum.val}}"  ng-model='levelMainSum.val' ng-change="levelMainSums.$save(levelMainSum);  showChanges()" >
 				        </td>
-				        <td><button ng-click='levelMainSums.$remove(levelMainSum)'>Delete</button></td>
+				        <td ng-click='levelMainSums.$remove(levelMainSum)'><i class="fa fa-times">Remove</i></td>
 	    			</tr>
 				    <tr>
 				        <td><input type='text' ng-model="newMainLev.key"></td>
