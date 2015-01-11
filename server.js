@@ -1,9 +1,7 @@
 var express = require('express');
-var bodyParser = require('body-parser');
 var app = express();
 
-app.use(express.static(__dirname + '/'));
-app.use(bodyParser());
+app.use(express.static(__dirname + '/public'));
 
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -12,6 +10,6 @@ app.use(function (req, res, next) {
     next();
 });
 
-var port = Number(process.env.PORT || 80);
+var port = Number(process.env.PORT || 8080);
 
 app.listen(port);

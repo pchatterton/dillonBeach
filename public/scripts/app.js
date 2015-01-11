@@ -7,7 +7,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 	$stateProvider
 		.state('home', {
 			url: '/',
-			templateUrl: '/app/views/home.html',
+			templateUrl: '/views/home.html',
 			controller: 'homeCtrl',
 			resolve: {
 				// images: function(firebaseService) {
@@ -32,22 +32,22 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 		})
 		.state('ownerInfo', {
 			url: '/owner-info',
-			templateUrl: '/app/views/ownerInfo.html',
+			templateUrl: '/views/ownerInfo.html',
 			controller: 'ownerInfoCtrl'
 		})
 		.state('bookNow', {
 			url: '/book-now',
-			templateUrl: '/app/views/bookNow.html',
+			templateUrl: '/views/bookNow.html',
 			controller: 'bookNowCtrl'
 		})
 		.state('login', {
 			url: '/login',
-			templateUrl: '/app/views/login.html',
+			templateUrl: '/views/login.html',
 			controller: 'loginCtrl'
 		})
 		.state('dashboard', {
 			url: '/dashboard',
-			templateUrl: '/app/views/dashboard.html',
+			templateUrl: '/views/dashboard.html',
 			controller: 'dashboardCtrl',
 			resolve: {
 				checkAuth: function(authService, $state) {
@@ -57,7 +57,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 		})
 		.state('dashboard.overview', {
 			url: '/overview',
-			templateUrl: '/app/views/dashboard/overviewEdit.html',
+			templateUrl: '/views/dashboard/overviewEdit.html',
 			controller: 'dbOverview',
 			resolve: {
 				images: function(firebaseService) {
@@ -79,11 +79,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 		})
 		.state('dashboard.location', {
 			url: '/location',
-			templateUrl: '/app/views/dashboard/locationEdit.html',
+			templateUrl: '/views/dashboard/locationEdit.html',
 		})
 		.state('dashboard.rates', {
 			url: '/rates',
-			templateUrl: '/app/views/dashboard/ratesEdit.html',
+			templateUrl: '/views/dashboard/ratesEdit.html',
 			controller: 'dbRates',
 			resolve: {
 				ratesGround: function(firebaseService) {
@@ -96,7 +96,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 		})
 		.state('dashboard.houseDetails', {
 			url: '/houseDetails',
-			templateUrl: '/app/views/dashboard/houseDetailsEdit.html',
+			templateUrl: '/views/dashboard/houseDetailsEdit.html',
 			controller: 'dbHouseDetails',
 			resolve: {
 				houseDetails: function(firebaseService) {
@@ -106,7 +106,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 		})
 		.state('dashboard.users', {
 			url: '/users',
-			templateUrl: '/app/views/dashboard/users.html',
+			templateUrl: '/views/dashboard/users.html',
 			controller: 'usersCtrl',
 		})
 });

@@ -88,55 +88,54 @@ header {
   -o-box-shadow: 0px 1px 5px  rgba(0,0,0,0.6);
 }
 
-  .inner-navbar {
+  .header-wrapper  {
     
   }
 
-      .inner-navbar .logo {
+      .header-wrapper  .logo {
         float: left;
       }
 
-      .inner-navbar .site-name {
+      .header-wrapper  .site-name {
         max-width: 400px; /*change for other devices*/
         float: left;
       }
 
-        .inner-navbar .site-name p.site-name-main {
+        .header-wrapper  .site-name p.site-name-main {
           font-size: 3.0rem;
         }
 
-        .inner-navbar .site-name p span.beach-house {
+        .header-wrapper  .site-name p span.beach-house {
           color: #3D7E99;
         }
 
-        .inner-navbar .site-name p.location {
+        .header-wrapper  .site-name p.location {
           margin-top: 5px;
           font-size: 1.8rem;
           color: #3D7E99;
           letter-spacing: 0.6px;
         }
 
-    .inner-navbar .nav-right {
-      float: right;
+    .header-wrapper  .nav-right {
       margin-top: 12px;
     }
 
-      .inner-navbar .nav-right ul {
+      .header-wrapper  .nav-right ul {
         font-size: 1.6rem;
       }
 
-        .inner-navbar .nav-right li {
+        .header-wrapper  .nav-right li {
           display: inline-block;
           margin-left: 5px;
           margin-right: 5px;
         }
 
-          .inner-navbar .nav-right li a {
+          .header-wrapper  .nav-right li a {
             color: #3D7E99;
             text-decoration: none;
           }
 
-          .inner-navbar .nav-right li a:hover {
+          .header-wrapper  .nav-right li a:hover {
             text-decoration: underline;
           }
 
@@ -163,7 +162,13 @@ header {
 
     .sub-header-wrapper .main-description p {
       text-transform: uppercase;
-      font-size: 2.6rem;
+      font-size: 1.6rem;
+    }
+
+    @media (min-width: 770px) {
+      .sub-header-wrapper .main-description p {
+        font-size: 2.3rem;
+      }
     }
 
   .sections-nav {
@@ -201,12 +206,24 @@ header {
 
       .sections-nav li {
         display: inline-block;
-        margin: 0 10px;
+        margin: 0 8px;
       }
 
-  section {
+    @media (min-width: 770px) {
+      .sections-nav li {
+        margin: 0 10px;
+      }
+    }
 
+@media screen and (max-width: 470px) {
+  .header-wrapper  .nav-right ul {
+    padding: 0px;
   }
+
+  .nav-right .pull-right {
+    float: left!important;
+  }
+}
 
   /* OVERVIEW */
 
@@ -215,8 +232,7 @@ header {
   }
 
     #overview .left-content {
-      width: 65%;
-      float: left;
+
     }
 
       .slider-wrapper {
@@ -267,10 +283,8 @@ header {
             line-height: 20px;
           }
 
-/* OVERVIEW STYLES */
     #overview .right-content {
-      width: 30%;
-      float: right;
+
     }
 
 
@@ -278,10 +292,6 @@ header {
         padding: 20px;
         background-color: white;
       }
-
-        .right-content .second-level-overview {
-          clear: both;
-        }
 
         .right-content .overview-content h3 {
           font-size: 2.0rem;
@@ -308,14 +318,6 @@ header {
           padding-left: 15px;
         }
 
-        .right-content nav ul li.float-left {
-          float: left;
-        }
-
-        .right-content nav ul li.float-right {
-          float: right;
-        }
-
       .right-content .quotes-container {
         margin-top: 50px;
         text-align: center;
@@ -338,8 +340,8 @@ header {
   }
 
     .location-content-wrapper {
-      width: 50%;
-      float: left;
+      /*width: 50%;
+      float: left;*/
     }
 
       .location-content-wrapper h2 {
@@ -378,15 +380,18 @@ header {
           }
 
     .location-map-wrapper {
-      width: 45%;
-      float: right;
+      /*width: 45%;
+      float: right;*/
       margin-top: 30px;
-      border: solid 10px #fff;
     }
 
-      .angular-google-map-container {
-        height: 400px;
+      google-map .angular-google-map {
+        border: solid 10px #fff;
       }
+
+        .angular-google-map-container {
+          height: 400px;
+        }
 
   #rates {
     margin-top: 50px;

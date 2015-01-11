@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app='peteBeachHouse'>
+<head>
+	<title>Petersen Beach House</title>
+
+	<!-- Stylesheets -->
+	<!-- <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body ng-controller='mainCtrl'>
+
+	<header ng-include="'views/header.html'"></header>
+	<div class='container-main' ui-view></div>
+	<footer>
+		<p>&#169; Petersen Dillon Beach Rental 2014</p>
+        <a ui-sref='login' ng-hide='loggedIn'>Admin Login</a>
+	</footer>
+
+
+    <!-- **** JS SCRIPT FILES **** -->
+
+	<!-- Environment -->
+	<script src="scripts/env.js"></script>
+
+	<!-- Vendor -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.min.js"></script>
+	<script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
+    <script src="httP://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.2.2/textAngular-sanitize.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.2.2/textAngular.min.js'></script>
+    <script src='http://maps.googleapis.com/maps/api/js?sensor=false'></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.underscore.js"></script>
+    <script src="bower_components/angular-google-maps/dist/angular-google-maps.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- App -->
+    <script src="scripts/app.js"></script>
+    <!-- Controllers -->
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/home.js"></script>
+    <script src="scripts/controllers/houseDetails.js"></script>
+    <script src="scripts/controllers/location.js"></script>
+    <script src="scripts/controllers/overview.js"></script>
+    <script src="scripts/controllers/rates.js"></script>
+    <script src="scripts/controllers/slider.js"></script>
+    <script src="scripts/controllers/login.js"></script>
+    <script src="scripts/controllers/users.js"></script>
+    <script src="scripts/controllers/dashboard.js"></script>
+    <script src="scripts/controllers/dbOverview.js"></script>
+    <script src="scripts/controllers/dbRates.js"></script>
+    <script src="scripts/controllers/dbHouseDetails.js"></script>
+    <script src="scripts/controllers/map.js"></script>
+    <!-- Services -->
+    <script src="scripts/services/environmentService.js"></script>
+    <script src="scripts/services/firebaseService.js"></script>
+    <script src="scripts/services/slider.js"></script>
+    <script src="scripts/services/authentication.js"></script>
+    <script src="scripts/services/dashboard.js"></script>
+    <script src="scripts/services/map.js"></script>
+    <!-- Filters -->
+    <script src="scripts/filters/currencyTextFilter.js"></script>
+
+</body>
+</html>
