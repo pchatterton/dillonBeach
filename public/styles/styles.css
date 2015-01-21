@@ -417,8 +417,8 @@ header {
       }
 
       .rates-wrapper .left-rates-wrapper {
-        width: 70%;
-        float: left;
+/*        width: 70%;
+        float: left;*/
       }
 
         #rates .left-rates-wrapper .table > tbody > tr > td {
@@ -430,15 +430,15 @@ header {
         }
 
       .rates-wrapper .right-rates-wrapper {
-        width: 30%;
+/*        width: 30%;
         float: right;
-        padding-left: 5%;
+        padding-left: 5%;*/
       }
 
       .rates-wrapper .nav {
-        position: absolute;
+/*        position: absolute;
         right: 100px;
-        bottom: 0;
+        bottom: 0;*/
       }
 
         .rates-wrapper .nav > li > a {

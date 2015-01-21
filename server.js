@@ -10,6 +10,6 @@ app.use(function (req, res, next) {
     next();
 });
 
-var port = Number(process.env.PORT || 8080);
+var port = Number(process.env.PORT || 80);
 
 app.listen(port);
