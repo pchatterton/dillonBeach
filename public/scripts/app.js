@@ -33,12 +33,10 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 		.state('ownerInfo', {
 			url: '/owner-info',
 			templateUrl: '/views/ownerInfo.html',
-			controller: 'ownerInfoCtrl'
 		})
-		.state('bookNow', {
-			url: '/book-now',
-			templateUrl: '/views/bookNow.html',
-			controller: 'bookNowCtrl'
+		.state('contact', {
+			url: '/contact',
+			templateUrl: '/views/contact.html',
 		})
 		.state('login', {
 			url: '/login',

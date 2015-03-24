@@ -10,6 +10,10 @@ app.use(function (req, res, next) {
     next();
 });
 
-var port = Number(process.env.PORT || 80);
+app.all('/*', function(req, res, next) {
+    res.sendFile('/public/index.html', { root: __dirname });
+});
+
+var port = Number(process.env.PORT || 2000);
 
 app.listen(port);
