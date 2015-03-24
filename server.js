@@ -14,6 +14,6 @@ app.all('/*', function(req, res, next) {
     res.sendFile('/public/index.html', { root: __dirname });
 });
 
-var port = Number(process.env.PORT || 2000);
+var port = Number(process.env.PORT || 80);
 
 app.listen(port);
